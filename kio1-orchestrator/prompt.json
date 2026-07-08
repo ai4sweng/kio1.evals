@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "file://prompts/kio1_ver1.txt"
+  },
+  {
+    "role": "user",
+    "content": "{{request}}"
+  }
+]

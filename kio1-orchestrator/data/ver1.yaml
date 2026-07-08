@@ -1,0 +1,1304 @@
+# ============================================================================
+# KIO1 Orchestrator Evaluation Dataset v1
+# 80+ diverse software-development requests across multiple domains
+# ============================================================================
+
+# ============================================================================
+# SECTION 1: MEDICAL DOMAIN
+# ============================================================================
+
+# 1. Clinical Decision Support System
+- vars:
+    id: "med-001"
+    domain: "medical"
+    request: "Build a clinical decision support system that analyzes patient symptoms, lab results, and medical history to suggest diagnoses and treatment plans for emergency department physicians."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 2. Medical Image Analysis Pipeline
+- vars:
+    id: "med-002"
+    domain: "medical"
+    request: "Develop an AI-powered medical image analysis pipeline for detecting tumors in MRI scans. The system should process DICOM images, run inference, and generate radiology reports."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 3. Patient Portal
+- vars:
+    id: "med-003"
+    domain: "medical"
+    request: "Create a patient portal web application where patients can view their medical records, schedule appointments, message their doctors, and manage prescriptions."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "medium"
+
+# 4. Hospital Scheduling Platform
+- vars:
+    id: "med-004"
+    domain: "medical"
+    request: "Build a hospital staff scheduling platform that optimizes shift assignments for nurses and doctors while ensuring compliance with labor regulations and adequate coverage."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "medium"
+
+# 5. Medical Device Firmware Updates
+- vars:
+    id: "med-005"
+    domain: "medical"
+    request: "Develop an over-the-air firmware update system for connected insulin pumps. Must include secure boot validation, rollback capability, and FDA compliance."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 7
+      must_include_agents: ["KIO3", "KIO7", "KIO9", "KIO12", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 6. Healthcare Chatbot
+- vars:
+    id: "med-006"
+    domain: "medical"
+    request: "Create an AI-powered healthcare chatbot that triages patient symptoms, provides first-aid guidance, and escalates emergencies to on-call physicians."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "medium"
+
+# 7. EHR Integration
+- vars:
+    id: "med-007"
+    domain: "medical"
+    request: "Build an HL7 FHIR integration layer to synchronize electronic health records between our hospital system and three external clinic databases."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 8. Pharmacy Inventory Management
+- vars:
+    id: "med-008"
+    domain: "medical"
+    request: "Develop a pharmacy inventory management system that tracks medication stock levels, expiration dates, and automatically generates reorder alerts."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# ============================================================================
+# SECTION 2: AUTOMOTIVE DOMAIN
+# ============================================================================
+
+# 9. Vehicle Diagnostics Platform
+- vars:
+    id: "auto-001"
+    domain: "automotive"
+    request: "Build a vehicle diagnostics platform that reads OBD-II sensor data, identifies fault codes, and provides repair recommendations to mechanics."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 10. Predictive Maintenance System (Automotive)
+- vars:
+    id: "auto-002"
+    domain: "automotive"
+    request: "Develop a predictive maintenance system for a fleet of electric vehicles that analyzes battery health telemetry, motor temperature, and driving patterns to forecast component failures."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO6", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO6"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 11. CAN Bus Monitoring Tool
+- vars:
+    id: "auto-003"
+    domain: "automotive"
+    request: "Create a CAN bus monitoring and analysis tool that captures vehicle network traffic, decodes messages using DBC files, and visualizes real-time signals."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 12. ADAS Data Pipeline
+- vars:
+    id: "auto-004"
+    domain: "automotive"
+    request: "Build a data pipeline for processing Advanced Driver Assistance System (ADAS) sensor data from LiDAR, cameras, and radar. Include data validation, labeling support, and storage."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 13. Fleet Management Platform
+- vars:
+    id: "auto-005"
+    domain: "automotive"
+    request: "Develop a fleet management platform for a logistics company with GPS tracking, route optimization, driver behavior scoring, and fuel consumption analytics."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 14. Embedded Automotive Controller
+- vars:
+    id: "auto-006"
+    domain: "automotive"
+    request: "Develop firmware for an embedded automotive controller managing window and mirror adjustments via LIN bus communication, running on an ARM Cortex-M4 microcontroller."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO10", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 15. ECU Software Update System
+- vars:
+    id: "auto-007"
+    domain: "automotive"
+    request: "Build a secure over-the-air ECU software update system for connected vehicles. Must support delta updates, cryptographic signature verification, and rollback on failure."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 16. Autonomous Driving Simulation
+- vars:
+    id: "auto-008"
+    domain: "automotive"
+    request: "Create a simulation environment for testing autonomous driving algorithms with virtual traffic scenarios, sensor emulation, and safety metric reporting."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# ============================================================================
+# SECTION 3: INDUSTRIAL / MANUFACTURING DOMAIN
+# ============================================================================
+
+# 17. Predictive Maintenance (Industrial)
+- vars:
+    id: "ind-001"
+    domain: "industrial"
+    request: "Build a predictive maintenance platform for a manufacturing plant that monitors vibration sensors on CNC machines and predicts bearing failures 48 hours in advance."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO6", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO6"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 18. Digital Twin Platform
+- vars:
+    id: "ind-002"
+    domain: "industrial"
+    request: "Develop a digital twin platform for a factory assembly line that mirrors physical equipment state in real-time, enables what-if simulations, and optimizes throughput."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 19. PLC Monitoring Dashboard
+- vars:
+    id: "ind-003"
+    domain: "industrial"
+    request: "Create a web dashboard that connects to Siemens S7 PLCs via OPC-UA, displays real-time process variables, and sends alerts when values exceed thresholds."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 20. Factory Scheduling Optimizer
+- vars:
+    id: "ind-004"
+    domain: "industrial"
+    request: "Build a production scheduling optimizer for a multi-line manufacturing facility that minimizes changeover time, balances workloads, and meets delivery deadlines."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 21. Quality Control Vision System
+- vars:
+    id: "ind-005"
+    domain: "industrial"
+    request: "Develop a computer vision quality control system that inspects manufactured parts on a conveyor belt, detects surface defects, and rejects non-conforming items."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO5"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 22. SCADA Modernization
+- vars:
+    id: "ind-006"
+    domain: "industrial"
+    request: "Modernize a legacy SCADA system for a water treatment plant by building a new web-based interface, migrating data historians, and adding cybersecurity hardening."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# ============================================================================
+# SECTION 4: ROBOTICS DOMAIN
+# ============================================================================
+
+# 23. Robot Navigation Software
+- vars:
+    id: "rob-001"
+    domain: "robotics"
+    request: "Build autonomous navigation software for an indoor warehouse robot using SLAM, path planning, and obstacle avoidance with ROS2."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 24. Vision-Based Inspection System
+- vars:
+    id: "rob-002"
+    domain: "robotics"
+    request: "Develop a vision-based robotic inspection system for wind turbine blades using a drone-mounted camera, defect classification AI, and automated report generation."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO5"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 25. Warehouse Automation
+- vars:
+    id: "rob-003"
+    domain: "robotics"
+    request: "Create a warehouse automation system that coordinates multiple picking robots, manages inventory locations, and optimizes order fulfillment routes."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 26. Robotic Arm Control Interface
+- vars:
+    id: "rob-004"
+    domain: "robotics"
+    request: "Build a control interface for a 6-DOF robotic arm that supports teach-and-playback programming, inverse kinematics, and safety zone enforcement."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 27. Agricultural Robot Software
+- vars:
+    id: "rob-005"
+    domain: "robotics"
+    request: "Develop software for an agricultural robot that autonomously navigates crop rows, identifies weeds using computer vision, and applies targeted herbicide spraying."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# ============================================================================
+# SECTION 5: IoT DOMAIN
+# ============================================================================
+
+# 28. Smart Building Monitoring
+- vars:
+    id: "iot-001"
+    domain: "iot"
+    request: "Build a smart building monitoring system that collects data from temperature, humidity, and occupancy sensors, provides dashboards, and controls HVAC systems automatically."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 29. Environmental Sensor Network
+- vars:
+    id: "iot-002"
+    domain: "iot"
+    request: "Develop a distributed environmental sensor network for monitoring air quality, noise levels, and particulate matter across a city, with a central data aggregation platform."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 30. Energy Optimization Platform
+- vars:
+    id: "iot-003"
+    domain: "iot"
+    request: "Create an energy optimization platform for a solar-powered smart home that manages battery storage, grid feed-in, and appliance scheduling based on energy forecasts."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 31. Smart Agriculture IoT
+- vars:
+    id: "iot-004"
+    domain: "iot"
+    request: "Build an IoT soil moisture and weather monitoring system for precision agriculture with LoRaWAN sensors, automated irrigation triggers, and a farmer dashboard."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 32. Industrial IoT Gateway
+- vars:
+    id: "iot-005"
+    domain: "iot"
+    request: "Develop firmware for an industrial IoT gateway that collects Modbus and MQTT sensor data, performs edge analytics, and securely forwards aggregated data to the cloud."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO10", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "hard"
+
+# 33. Smart Parking System
+- vars:
+    id: "iot-006"
+    domain: "iot"
+    request: "Create a smart parking system using ultrasonic sensors to detect occupancy, a mobile app for finding available spots, and a management dashboard for operators."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# ============================================================================
+# SECTION 6: GENERAL SOFTWARE ENGINEERING
+# ============================================================================
+
+# 34. CRUD REST API
+- vars:
+    id: "gen-001"
+    domain: "general"
+    request: "Build a REST API for a task management application with CRUD operations for users, projects, and tasks. Use Node.js and PostgreSQL."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 35. SaaS Platform
+- vars:
+    id: "gen-002"
+    domain: "general"
+    request: "Develop a multi-tenant SaaS platform for invoice management with user authentication, role-based access control, PDF generation, and Stripe payment integration."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 36. Mobile Application
+- vars:
+    id: "gen-003"
+    domain: "general"
+    request: "Create a cross-platform mobile app for a fitness tracker that logs workouts, tracks calories, displays progress charts, and syncs with wearable devices."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 37. Microservices Architecture
+- vars:
+    id: "gen-004"
+    domain: "general"
+    request: "Design and implement a microservices-based e-commerce platform with services for product catalog, shopping cart, order processing, payment gateway, and notification."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "hard"
+
+# 38. Data Pipeline (General)
+- vars:
+    id: "gen-005"
+    domain: "general"
+    request: "Create an ETL data pipeline that extracts data from multiple REST APIs, transforms and normalizes it, validates data quality, and loads it into a data warehouse."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO6"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 39. AI Assistant
+- vars:
+    id: "gen-006"
+    domain: "general"
+    request: "Build an AI-powered customer support assistant that answers product questions, handles returns and refunds, and escalates complex issues to human agents."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "medium"
+
+# 40. DevOps Automation
+- vars:
+    id: "gen-007"
+    domain: "general"
+    request: "Set up a complete CI/CD pipeline with automated builds, unit and integration testing, container image creation, and deployment to Kubernetes staging and production environments."
+    expected_agents: ["KIO8", "KIO11"]
+    expected_workflow_characteristics:
+      min_steps: 2
+      must_include_agents: ["KIO8", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 41. Legacy Modernization
+- vars:
+    id: "gen-008"
+    domain: "general"
+    request: "Modernize a legacy COBOL banking application by analyzing the existing codebase, designing a new microservices architecture, generating equivalent Java services, and creating migration tests."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "hard"
+
+# 42. Real-time Chat Application
+- vars:
+    id: "gen-009"
+    domain: "general"
+    request: "Build a real-time chat application with WebSocket support, message persistence, file sharing, group channels, and end-to-end encryption."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 43. Content Management System
+- vars:
+    id: "gen-010"
+    domain: "general"
+    request: "Create a headless CMS with a REST and GraphQL API, content versioning, media asset management, and a React-based admin panel."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 44. Event-Driven Architecture
+- vars:
+    id: "gen-011"
+    domain: "general"
+    request: "Design and implement an event-driven order processing system using Apache Kafka for event streaming, with event sourcing and CQRS patterns."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 45. API Gateway
+- vars:
+    id: "gen-012"
+    domain: "general"
+    request: "Build a custom API gateway with rate limiting, authentication, request routing, response caching, and observability logging."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# ============================================================================
+# SECTION 7: AGENT SELECTION EDGE CASES
+# ============================================================================
+
+# 46. Bug Fix Only
+- vars:
+    id: "edge-001"
+    domain: "general"
+    request: "Fix the memory leak in our Python image processing service that causes OOM crashes after processing 1000 images."
+    expected_agents: ["KIO2", "KIO7", "KIO11"]
+    expected_workflow_characteristics:
+      min_steps: 2
+      must_include_agents: ["KIO2"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 47. Testing Only
+- vars:
+    id: "edge-002"
+    domain: "general"
+    request: "Write comprehensive unit tests and integration tests for our existing user authentication module."
+    expected_agents: ["KIO11"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO11"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 48. Data Generation Only
+- vars:
+    id: "edge-003"
+    domain: "general"
+    request: "Generate a synthetic dataset of 50,000 customer transaction records for testing our fraud detection model."
+    expected_agents: ["KIO5"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO5"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 49. Security Audit Only
+- vars:
+    id: "edge-004"
+    domain: "general"
+    request: "Perform a comprehensive cybersecurity audit of our web application including OWASP Top 10 vulnerability scanning and penetration testing."
+    expected_agents: ["KIO12"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO12"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "easy"
+
+# 50. Deployment Only
+- vars:
+    id: "edge-005"
+    domain: "general"
+    request: "Deploy our existing containerized application to a Kubernetes cluster with Helm charts, set up monitoring with Prometheus and Grafana."
+    expected_agents: ["KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO8"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 51. Training and Onboarding
+- vars:
+    id: "edge-006"
+    domain: "general"
+    request: "Create an onboarding program and training materials for new developers joining our team, including tutorials on our tech stack and codebase walkthrough."
+    expected_agents: ["KIO13"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO13"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 52. Code Understanding Only
+- vars:
+    id: "edge-007"
+    domain: "general"
+    request: "Analyze our legacy Java codebase and generate documentation explaining the architecture, class relationships, and data flow."
+    expected_agents: ["KIO7"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO7"]
+      must_not_include_agents: ["KIO1", "KIO3"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 53. Data Validation Only
+- vars:
+    id: "edge-008"
+    domain: "general"
+    request: "Validate the data quality of our customer database: check for duplicates, missing fields, format inconsistencies, and referential integrity violations."
+    expected_agents: ["KIO6"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO6"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 54. Requirements Only
+- vars:
+    id: "edge-009"
+    domain: "general"
+    request: "Create a detailed software requirements specification with user stories and acceptance criteria for a new inventory management module."
+    expected_agents: ["KIO3"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO3"]
+      must_not_include_agents: ["KIO1", "KIO4", "KIO7"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 55. Architecture Only
+- vars:
+    id: "edge-010"
+    domain: "general"
+    request: "Design the software architecture for a high-availability payment processing system supporting 10,000 transactions per second."
+    expected_agents: ["KIO3", "KIO4"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO4"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 56. Compliance Review Only
+- vars:
+    id: "edge-011"
+    domain: "medical"
+    request: "Review our medical imaging software for HIPAA compliance and generate a compliance gap report."
+    expected_agents: ["KIO9"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "easy"
+
+# 57. Energy Efficiency Only
+- vars:
+    id: "edge-012"
+    domain: "iot"
+    request: "Analyze the energy consumption of our battery-powered sensor node firmware and recommend optimizations to extend battery life from 6 months to 2 years."
+    expected_agents: ["KIO10"]
+    expected_workflow_characteristics:
+      min_steps: 1
+      must_include_agents: ["KIO10"]
+      must_not_include_agents: ["KIO1", "KIO3"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# ============================================================================
+# SECTION 8: MULTI-DOMAIN / COMPLEX SCENARIOS
+# ============================================================================
+
+# 58. Connected Medical Device Ecosystem
+- vars:
+    id: "complex-001"
+    domain: "medical"
+    request: "Build a complete connected medical device ecosystem: wearable patient sensors with embedded firmware, a cloud platform for data aggregation, AI-based anomaly detection, a physician dashboard, and regulatory compliance documentation."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO6", "KIO10", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 8
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO10", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 59. Autonomous Vehicle Platform
+- vars:
+    id: "complex-002"
+    domain: "automotive"
+    request: "Develop the software platform for an autonomous delivery vehicle: perception stack, path planning, vehicle control firmware, fleet management backend, safety monitoring, and OTA update system."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO9", "KIO10", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 8
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 60. Smart Factory Full Stack
+- vars:
+    id: "complex-003"
+    domain: "industrial"
+    request: "Build a full smart factory system: IoT sensor network, edge computing gateways, cloud analytics platform, digital twin visualization, predictive maintenance AI, operator training modules, and security hardening."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO6", "KIO10", "KIO12", "KIO13", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 8
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO13", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "hard"
+
+# 61. Fintech Platform
+- vars:
+    id: "complex-004"
+    domain: "general"
+    request: "Create a fintech lending platform with loan application processing, credit scoring AI, KYC/AML compliance checks, document verification, payment processing, and regulatory reporting."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO5", "KIO6", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 7
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 62. EdTech Platform
+- vars:
+    id: "complex-005"
+    domain: "general"
+    request: "Build an online learning platform with course creation tools, video streaming, interactive quizzes, progress tracking, certificate generation, and an AI tutoring chatbot."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "medium"
+
+# ============================================================================
+# SECTION 9: DOMAIN-SPECIFIC DETAILED SCENARIOS
+# ============================================================================
+
+# 63. Telemedicine Platform
+- vars:
+    id: "med-009"
+    domain: "medical"
+    request: "Build a telemedicine platform with video consultations, appointment scheduling, e-prescriptions, and integration with pharmacy systems."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 64. Vehicle Telematics
+- vars:
+    id: "auto-009"
+    domain: "automotive"
+    request: "Develop a vehicle telematics system that collects GPS, speed, and engine data via OBD-II, transmits it to a cloud backend, and provides driver behavior analytics."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 65. Supply Chain Tracking
+- vars:
+    id: "ind-007"
+    domain: "industrial"
+    request: "Build a blockchain-based supply chain tracking system for pharmaceutical products with serialization, chain-of-custody verification, and temperature monitoring."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 7
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 66. Wearable Health Monitor Firmware
+- vars:
+    id: "iot-007"
+    domain: "iot"
+    request: "Develop low-power firmware for a wearable health monitor that tracks heart rate, SpO2, and activity on a Nordic nRF52 chip with BLE connectivity."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO10", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 67. Notification Service
+- vars:
+    id: "gen-013"
+    domain: "general"
+    request: "Build a multi-channel notification service that sends emails, SMS, and push notifications with template management, delivery tracking, and retry logic."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 68. Log Aggregation Platform
+- vars:
+    id: "gen-014"
+    domain: "general"
+    request: "Create a centralized log aggregation platform that collects logs from distributed microservices, indexes them for search, and provides alerting on error patterns."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 69. Code Review Bot
+- vars:
+    id: "gen-015"
+    domain: "general"
+    request: "Build an AI-powered code review bot that integrates with GitHub, analyzes pull requests for bugs, style violations, and security issues, and posts review comments."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 70. Document Management System
+- vars:
+    id: "gen-016"
+    domain: "general"
+    request: "Develop a document management system with version control, full-text search, access control, digital signatures, and audit logging."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 71. Bug Diagnosis and Fix with Testing
+- vars:
+    id: "edge-013"
+    domain: "general"
+    request: "Our authentication service returns 500 errors intermittently when handling concurrent login requests. Diagnose the root cause, implement a fix, and add load tests."
+    expected_agents: ["KIO2", "KIO7", "KIO11"]
+    expected_workflow_characteristics:
+      min_steps: 3
+      must_include_agents: ["KIO2", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 72. Data Generation and Validation
+- vars:
+    id: "edge-014"
+    domain: "general"
+    request: "Generate synthetic medical patient records for testing and validate that the generated data matches our schema and statistical distribution requirements."
+    expected_agents: ["KIO5", "KIO6"]
+    expected_workflow_characteristics:
+      min_steps: 2
+      must_include_agents: ["KIO5", "KIO6"]
+      must_not_include_agents: ["KIO1", "KIO3", "KIO4"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 73. Security Hardening
+- vars:
+    id: "edge-015"
+    domain: "general"
+    request: "Perform security hardening on our REST API: implement rate limiting, input validation, CORS configuration, and run OWASP vulnerability scans."
+    expected_agents: ["KIO12", "KIO7", "KIO11"]
+    expected_workflow_characteristics:
+      min_steps: 2
+      must_include_agents: ["KIO12", "KIO7"]
+      must_not_include_agents: ["KIO1", "KIO3"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 74. ML Model Training Pipeline
+- vars:
+    id: "gen-017"
+    domain: "general"
+    request: "Build an ML model training pipeline with data preprocessing, feature engineering, model training, hyperparameter tuning, model evaluation, and deployment to a serving endpoint."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO6", "KIO8"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 75. GraphQL Federation
+- vars:
+    id: "gen-018"
+    domain: "general"
+    request: "Implement a GraphQL federation gateway that unifies four existing microservice APIs into a single GraphQL endpoint with schema stitching and query optimization."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# ============================================================================
+# SECTION 10: ADDITIONAL DOMAIN-SPECIFIC SCENARIOS
+# ============================================================================
+
+# 76. Medical Lab Information System
+- vars:
+    id: "med-010"
+    domain: "medical"
+    request: "Develop a laboratory information management system (LIMS) for processing blood test orders, tracking specimens, recording results, and generating lab reports with HL7 integration."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 77. V2X Communication Stack
+- vars:
+    id: "auto-010"
+    domain: "automotive"
+    request: "Implement a Vehicle-to-Everything (V2X) communication stack supporting V2V and V2I messaging with DSRC protocol, message signing, and latency monitoring."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 78. Drone Swarm Coordination
+- vars:
+    id: "rob-006"
+    domain: "robotics"
+    request: "Build coordination software for a swarm of 20 delivery drones including collision avoidance, dynamic route assignment, battery management, and ground station monitoring."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 79. Smart Grid Energy Management
+- vars:
+    id: "iot-008"
+    domain: "iot"
+    request: "Develop a smart grid energy management system that balances supply from solar, wind, and battery storage using real-time pricing signals and demand forecasting."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 80. Authentication Microservice
+- vars:
+    id: "gen-019"
+    domain: "general"
+    request: "Build a standalone authentication microservice with OAuth2, OIDC, MFA support, JWT token management, and session handling."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: true
+    difficulty: "medium"
+
+# 81. TinyML Anomaly Detection
+- vars:
+    id: "iot-009"
+    domain: "iot"
+    request: "Develop a TinyML anomaly detection model for vibration analysis that runs on an ESP32 microcontroller to detect machine faults at the edge."
+    expected_agents: ["KIO3", "KIO4", "KIO5", "KIO7", "KIO10", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO5", "KIO10"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "hard"
+
+# 82. Surgical Robot Control Software
+- vars:
+    id: "rob-007"
+    domain: "robotics"
+    request: "Develop control software for a minimally invasive surgical robot with haptic feedback, real-time motion scaling, and safety interlocks. Must comply with medical device regulations."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 7
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 83. Developer Onboarding with Code Review
+- vars:
+    id: "edge-016"
+    domain: "general"
+    request: "Create developer onboarding materials for our microservices platform and set up automated code review guidelines for new team members."
+    expected_agents: ["KIO13", "KIO7"]
+    expected_workflow_characteristics:
+      min_steps: 2
+      must_include_agents: ["KIO13"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 84. Batch Data Processing
+- vars:
+    id: "gen-020"
+    domain: "general"
+    request: "Build a batch data processing system that runs nightly ETL jobs to aggregate sales data from 50 retail stores, validate totals, and generate daily financial reports."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO6"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 85. Regulatory Compliance Automation
+- vars:
+    id: "complex-006"
+    domain: "general"
+    request: "Build an automated regulatory compliance system that scans codebases for GDPR violations, generates compliance reports, and tracks remediation of identified issues."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"
+
+# 86. Multi-Robot Coordination
+- vars:
+    id: "rob-008"
+    domain: "robotics"
+    request: "Build a multi-robot task allocation system for a hospital environment where robots deliver medications, meals, and lab samples between floors."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 87. Embedded BMS Firmware
+- vars:
+    id: "auto-011"
+    domain: "automotive"
+    request: "Develop battery management system firmware for an EV that monitors cell voltages, manages thermal regulation, and implements charge balancing algorithms on an STM32."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO10", "KIO9", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 6
+      must_include_agents: ["KIO3", "KIO7", "KIO10", "KIO9"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: false
+    difficulty: "hard"
+
+# 88. Feature Flag Service
+- vars:
+    id: "gen-021"
+    domain: "general"
+    request: "Build a feature flag management service with a REST API, percentage-based rollouts, user targeting rules, and a React admin dashboard."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO7", "KIO11"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "easy"
+
+# 89. Inventory RFID Tracking
+- vars:
+    id: "ind-008"
+    domain: "industrial"
+    request: "Create an RFID-based inventory tracking system for a warehouse with handheld reader integration, real-time stock visibility, and automated reorder triggers."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 5
+      must_include_agents: ["KIO3", "KIO4", "KIO7"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: false
+      requires_security: false
+    difficulty: "medium"
+
+# 90. Clinical Trial Data Platform
+- vars:
+    id: "med-011"
+    domain: "medical"
+    request: "Build a clinical trial data management platform for collecting patient data, randomizing treatment groups, tracking adverse events, and generating FDA submission reports."
+    expected_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO12", "KIO11", "KIO8"]
+    expected_workflow_characteristics:
+      min_steps: 7
+      must_include_agents: ["KIO3", "KIO4", "KIO7", "KIO6", "KIO9", "KIO12"]
+      must_not_include_agents: ["KIO1"]
+      requires_compliance: true
+      requires_security: true
+    difficulty: "hard"

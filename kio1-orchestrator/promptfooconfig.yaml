@@ -1,0 +1,22 @@
+description: "KIO1 Orchestrator Workflow Evaluation"
+prompts: [file://prompt.json]
+providers:
+  - id: ollama:chat:qwen2.5:7b
+    config:
+      temperature: 0.1
+  - id: ollama:chat:ministral-3:8b
+    config:
+      temperature: 0.1
+defaultTest:
+  options:
+    postprocess: |
+      const jsonMatch = output.match(/```json\n([\s\S]*?)\n```/) || output.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        return jsonMatch[1] || jsonMatch[0];
+      }
+      return output;
+  assert:
+    - type: javascript
+      value: file://workflow_eval.js
+tests: file://data/ver1.yaml
+
